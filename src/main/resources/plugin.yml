@@ -1,0 +1,4 @@
+name: AquilaCine
+version: '1.0.0'
+main: de.emn4tor.AquilaCine
+api-version: '1.21'
