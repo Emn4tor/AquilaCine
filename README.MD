@@ -59,7 +59,7 @@ Camera drive scripts use the \`.cdrive\` extension and should be placed in the \
 
 Basic script structure:
 
-\`\`\`
+```
 # Camera Drive Name
 name: MyCameraDrive
 
@@ -75,7 +75,7 @@ speed: 5
 
 # Change speed at a specific point
 @15,75,15: speed 10
-\`\`\`
+```
 
 ## Tutorials
 
@@ -85,13 +85,13 @@ speed: 5
 2. Create a new file named \`my_first_drive.cdrive\`
 3. Open the file and add the following content:
 
-   \`\`\`
+   ```
    name: MyFirstDrive
    waypoint: 0,64,0,0,0
    waypoint: 10,70,10,45,15
    waypoint: 20,75,20,90,30
    speed: 3
-   \`\`\`
+   ```
 
 4. Save the file and run \`/cameradrive reload\` in-game
 5. Start your drive with \`/cameradrive start MyFirstDrive\`
@@ -99,33 +99,33 @@ speed: 5
 ### Advanced Camera Techniques
 
 1. **Spiral Ascent**:
-   \`\`\`
+   ```
    waypoint: 0,64,0,0,0
    waypoint: 5,70,5,90,15
    waypoint: 10,76,0,180,30
    waypoint: 5,82,-5,270,45
    waypoint: 0,88,0,360,60
-   \`\`\`
+   ```
 
 2. **Dynamic Speed Changes**:
-   \`\`\`
+   ```
    speed: 2
    waypoint: 0,64,0,0,0
    @10,70,10: speed 5
    waypoint: 20,76,20,90,15
    @30,82,30: speed 1
    waypoint: 40,88,40,180,30
-   \`\`\`
+   ```
 
 3. **Simulating a Drone Shot**:
-   \`\`\`
+   ```
    speed: 3
    waypoint: 0,70,0,0,0
    waypoint: 10,72,10,45,5
    waypoint: 20,68,20,90,-5
    waypoint: 30,74,30,135,10
    waypoint: 40,70,40,180,0
-   \`\`\`
+   ```
 
 ## Configuration
 
@@ -140,7 +140,7 @@ Key configuration options:
 
 For developers looking to integrate CameraDrives into their plugins:
 
-\`\`\`java
+```java
 CameraDrivesPlugin plugin = (CameraDrivesPlugin) Bukkit.getPluginManager().getPlugin("CameraDrives");
 
 // Get a camera drive
@@ -154,7 +154,7 @@ boolean isInDrive = plugin.getDriveManager().isInDriveSession(player);
 
 // Stop a player's current drive
 plugin.getDriveManager().stopDrive(player);
-\`\`\`
+```
 
 ## Troubleshooting
 
