@@ -1,0 +1,12 @@
+# AquilaCine Configuration
+
+# Default settings for new camera drives
+defaults:
+  speed: 5.0  # Blocks per second
+
+# Messages
+messages:
+  prefix: "<dark_aqua>[AquilaCine]</dark_aqua> "
+  reload: "<green>AquilaCine reloaded successfully!</green>"
+  no_permission: "<red>You don't have permission to use this command.</red>"
+
