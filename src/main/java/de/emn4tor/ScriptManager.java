@@ -68,20 +68,70 @@ public class ScriptManager {
      */
     private void createBasicExampleScript() {
         try {
-            File exampleScript = new File(scriptsDir, "example.cdrive");
+            File exampleScript = new File(scriptsDir, "ultimate-example.cdrive");
             if (!exampleScript.exists()) {
                 exampleScript.createNewFile();
                 try (FileWriter writer = new FileWriter(exampleScript)) {
-                    writer.write("# Example Camera Drive Script\n");
-                    writer.write("name: ExampleDrive\n");
-                    writer.write("# Define waypoints as x,y,z,yaw,pitch\n");
-                    writer.write("waypoint: 100,64,100,0,0\n");
-                    writer.write("waypoint: 110,70,110,45,10\n");
-                    writer.write("waypoint: 120,75,120,90,20\n");
-                    writer.write("# Speed in blocks per second\n");
-                    writer.write("speed: 5\n");
+                    writer.write("# Ultimate Showcase Camera Drive\n");
+                    writer.write("# This script demonstrates all features of the CameraDrives system\n\n");
+                    writer.write("name: UltimateShowcase\n\n");
+                    writer.write("# Specify the world (optional, defaults to the first world if not specified)\n");
+                    writer.write("world: world\n\n");
+                    writer.write("# Starting point - ground level, looking straight ahead\n");
+                    writer.write("waypoint: 0,64,0,0,0\n\n");
+                    writer.write("# Slow ascent with a slight turn\n");
+                    writer.write("waypoint: 5,70,5,15,5\n");
+                    writer.write("waypoint: 10,75,10,30,10\n\n");
+                    writer.write("# Quick rise to a high point\n");
+                    writer.write("waypoint: 15,100,15,45,30\n\n");
+                    writer.write("# Dramatic top-down view\n");
+                    writer.write("waypoint: 20,120,20,0,90\n\n");
+                    writer.write("# Rapid descent with spin\n");
+                    writer.write("waypoint: 25,100,25,90,45\n");
+                    writer.write("waypoint: 30,80,30,180,0\n");
+                    writer.write("waypoint: 35,60,35,270,-10\n\n");
+                    writer.write("# Low tracking shot\n");
+                    writer.write("waypoint: 40,66,40,315,0\n");
+                    writer.write("waypoint: 50,66,50,315,0\n\n");
+                    writer.write("# Curve around an imaginary structure\n");
+                    writer.write("waypoint: 60,70,55,270,10\n");
+                    writer.write("waypoint: 65,75,60,225,15\n");
+                    writer.write("waypoint: 70,80,65,180,20\n\n");
+                    writer.write("# Spiral ascent\n");
+                    writer.write("waypoint: 75,85,65,135,25\n");
+                    writer.write("waypoint: 80,90,60,90,30\n");
+                    writer.write("waypoint: 85,95,55,45,35\n");
+                    writer.write("waypoint: 90,100,50,0,40\n\n");
+                    writer.write("# Quick side-to-side movement\n");
+                    writer.write("waypoint: 95,100,55,0,0\n");
+                    writer.write("waypoint: 100,100,45,0,0\n");
+                    writer.write("waypoint: 105,100,55,0,0\n\n");
+                    writer.write("# Dive towards ground\n");
+                    writer.write("waypoint: 110,70,50,0,-45\n\n");
+                    writer.write("# Pull up at last second\n");
+                    writer.write("waypoint: 115,66,45,0,0\n\n");
+                    writer.write("# Slow crawl to finish\n");
+                    writer.write("waypoint: 120,66,40,0,0\n\n");
+                    writer.write("# Speed changes throughout the drive\n");
+                    writer.write("# Start slow\n");
+                    writer.write("speed: 2\n\n");
+                    writer.write("# Speed up for the rise\n");
+                    writer.write("@125,66,35: speed 8\n\n");
+                    writer.write("# Slow down for the top-down view\n");
+                    writer.write("@20,120,20: speed 1\n\n");
+                    writer.write("# Speed up for the rapid descent\n");
+                    writer.write("@25,100,25: speed 10\n\n");
+                    writer.write("# Normal speed for tracking shot\n");
+                    writer.write("@40,66,40: speed 5\n\n");
+                    writer.write("# Slow for spiral\n");
+                    writer.write("@75,85,65: speed 3\n\n");
+                    writer.write("# Fast for side-to-side\n");
+                    writer.write("@95,100,55: speed 15\n\n");
+                    writer.write("# Slow for final approach\n");
+                    writer.write("@115,66,45: speed 2\n\n");
+                    writer.write("# End of camera drive\n");
                 }
-                plugin.getLogger().info("Created example script file");
+                plugin.getLogger().info("Created ultimate example script file");
             }
         } catch (IOException e) {
             plugin.getLogger().severe("Failed to create example script: " + e.getMessage());
