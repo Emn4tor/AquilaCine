@@ -43,10 +43,10 @@ CameraDrives is a powerful Minecraft plugin for Paper 1.21 that allows server ad
 
 ### Commands
 
-- \`/cameradrive list\` - List all available camera drives
-- \`/cameradrive start <name>\` - Start a camera drive
-- \`/cameradrive stop\` - Stop your current camera drive
-- \`/cameradrive reload\` - Reload all camera drive scripts
+- `cameradrive list\` - List all available camera drives
+- `cameradrive start <name>\` - Start a camera drive
+- `cameradrive stop\` - Stop your current camera drive
+- `cameradrive reload\` - Reload all camera drive scripts
 
 ### Permissions
 
@@ -93,8 +93,8 @@ speed: 5
    speed: 3
    ```
 
-4. Save the file and run \`/cameradrive reload\` in-game
-5. Start your drive with \`/cameradrive start MyFirstDrive\`
+4. Save the file and run `cameradrive reload\` in-game
+5. Start your drive with `cameradrive start MyFirstDrive\`
 
 ### Advanced Camera Techniques
 
