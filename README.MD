@@ -1,4 +1,4 @@
-# CameraDrives Plugin
+# AquilaCine Plugin
 
 ## Table of Contents
 1. [Introduction](#introduction)
@@ -19,7 +19,7 @@
 
 ## Introduction
 
-CameraDrives is a powerful Minecraft plugin for Paper 1.21 that allows server administrators and content creators to create smooth, cinematic camera movements within the game. With an easy-to-use scripting system, you can design complex camera paths, control movement speeds, and create stunning visual experiences for your players.
+AquilaCine is a powerful Minecraft plugin for Paper 1.21 that allows server administrators and content creators to create smooth, cinematic camera movements within the game. With an easy-to-use scripting system, you can design complex camera paths, control movement speeds, and create stunning visual experiences for your players.
 
 ## Features
 
@@ -34,7 +34,7 @@ CameraDrives is a powerful Minecraft plugin for Paper 1.21 that allows server ad
 
 ## Installation
 
-1. Download the latest \`CameraDrives.jar\` from the releases page.
+1. Download the latest \`AquilaCine.jar\` from the releases page.
 2. Place the jar file in your server's \`plugins\` folder.
 3. Restart your server or use a plugin manager to load the plugin.
 4. The plugin will generate a default configuration and example scripts on first run.
@@ -50,12 +50,12 @@ CameraDrives is a powerful Minecraft plugin for Paper 1.21 that allows server ad
 
 ### Permissions
 
-- \`cameradrives.use\` - Allows use of basic camera drive commands (default: true)
-- \`cameradrives.reload\` - Allows reloading of camera drive scripts (default: op)
+- \`AquilaCine.use\` - Allows use of basic camera drive commands (default: true)
+- \`AquilaCine.reload\` - Allows reloading of camera drive scripts (default: op)
 
 ## Script Format
 
-Camera drive scripts use the \`.cdrive\` extension and should be placed in the \`plugins/CameraDrives/scripts/\` directory.
+Camera drive scripts use the \`.cdrive\` extension and should be placed in the \`plugins/AquilaCine/scripts/\` directory.
 
 Basic script structure:
 
@@ -81,7 +81,7 @@ speed: 5
 
 ### Creating Your First Camera Drive
 
-1. Navigate to \`plugins/CameraDrives/scripts/\`
+1. Navigate to \`plugins/AquilaCine/scripts/\`
 2. Create a new file named \`my_first_drive.cdrive\`
 3. Open the file and add the following content:
 
@@ -129,7 +129,7 @@ speed: 5
 
 ## Configuration
 
-The main configuration file is located at \`plugins/CameraDrives/config.yml\`.
+The main configuration file is located at \`plugins/AquilaCine/config.yml\`.
 
 Key configuration options:
 - \`default-speed\`: Default speed for camera drives if not specified in the script
@@ -138,10 +138,10 @@ Key configuration options:
 
 ## API Documentation
 
-For developers looking to integrate CameraDrives into their plugins:
+For developers looking to integrate AquilaCine into their plugins:
 
 ```java
-CameraDrivesPlugin plugin = (CameraDrivesPlugin) Bukkit.getPluginManager().getPlugin("CameraDrives");
+AquilaCinePlugin plugin = (AquilaCinePlugin) Bukkit.getPluginManager().getPlugin("AquilaCine");
 
 // Get a camera drive
 CameraDrive drive = plugin.getDriveManager().getDrive("MyDrive");
@@ -164,9 +164,9 @@ plugin.getDriveManager().stopDrive(player);
 
 ## Contributing
 
-We welcome contributions to the CameraDrives plugin! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to submit issues, feature requests, and pull requests.
+We welcome contributions to the AquilaCine plugin! Please see our [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines on how to submit issues, feature requests, and pull requests.
 
 ## License
 
-CameraDrives is released under the MIT License. See the [LICENSE](LICENSE) file for details.
+AquilaCine is released under the MIT License. See the [LICENSE](LICENSE) file for details.
 
