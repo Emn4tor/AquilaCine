@@ -127,7 +127,7 @@ public class CameraDrive {
                 taskId = -1;
                 plugin.getDriveManager().unregisterActiveSession(player);
 
-                // Option to return to original location
+                // Option to return to start location
                 if (plugin.getConfig().getBoolean("return-to-original-location", false)) {
                     player.teleport(originalLocation);
                 }
